@@ -47,8 +47,8 @@ public class HouseSpawner : MonoBehaviour
 
     Vector2 latLonToCoordsInMeters(float lat, float lon) {
         return new Vector2(
-            lat * earthCircumference / 360 * Mathf.Cos(lon * Mathf.Deg2Rad),
-            lon * earthCircumference / 360
+            lon * earthCircumference / 360 * Mathf.Cos(lat * Mathf.Deg2Rad),
+            lat * earthCircumference / 360
         );
     }
 
